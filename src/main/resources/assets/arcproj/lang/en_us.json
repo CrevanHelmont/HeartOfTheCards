@@ -1,0 +1,89 @@
+{
+  "item.arcproj.tarot_card": "Tarot Card",
+  "item.arcproj.tarot_card.tooltip": "The base for a Major Arcana Tarot Card",
+
+  "item.arcproj.the_fool": "The Fool (0)",
+  "item.arcproj.the_fool.tooltip": "No function yet",
+
+  "item.arcproj.the_magician": "The Magician (I)",
+  "item.arcproj.the_magician.tooltip": "No function yet",
+
+  "item.arcproj.the_high_priestess": "The High Priestess (II)",
+  "item.arcproj.the_high_priestess.tooltip": "No function yet",
+
+  "item.arcproj.the_empress": "The Empress (III)",
+  "item.arcproj.the_empress.tooltip": "No function yet",
+
+  "item.arcproj.the_emperor": "The Emperor (IV)",
+  "item.arcproj.the_emperor.tooltip": "No function yet",
+
+  "item.arcproj.the_hierophant": "The Hierophant (V)",
+  "item.arcproj.the_hierophant.tooltip": "No function yet",
+
+  "item.arcproj.the_lovers": "The Lovers (VI)",
+  "item.arcproj.the_lovers.tooltip": "A universal breeding material",
+
+  "item.arcproj.the_chariot": "The Chariot (VII)",
+  "item.arcproj.the_chariot.tooltip": "W.I.P.",
+
+  "item.arcproj.strength": "Strength (VIII)",
+  "item.arcproj.strength.tooltip": "No function yet",
+
+  "item.arcproj.the_hermit": "The Hermit (IX)",
+  "item.arcproj.the_hermit.tooltip": "Invisibility for ten minutes",
+
+  "item.arcproj.wheel_of_fortune": "Wheel Of Fortune (X)",
+  "item.arcproj.wheel_of_fortune.tooltip": "Right-Click for a surprise!",
+
+  "item.arcproj.justice": "Justice (XI)",
+  "item.arcproj.justice.tooltip": "No function yet",
+
+  "item.arcproj.the_hanged_man": "The Hanged Man (XII)",
+  "item.arcproj.the_hanged_man.tooltip": "No function yet",
+
+  "item.arcproj.death": "Death (XIII)",
+  "item.arcproj.death.tooltip": "No function yet",
+
+  "item.arcproj.temperance": "Temperance (XIV)",
+  "item.arcproj.temperance.tooltip": "No function yet",
+
+  "item.arcproj.the_devil": "The Devil (XV)",
+  "item.arcproj.the_devil.tooltip": "Locates a Nether Fortress",
+
+  "item.arcproj.the_tower": "The Tower (XVI)",
+  "item.arcproj.the_tower.tooltip": "Right-click to teleport to your spawn point",
+  "item.arcproj.the_tower.tooltip2": "Shift Right-click to set spawn for 5 levels",
+
+  "item.arcproj.the_star": "The Star (XVII)",
+  "item.arcproj.the_star.tooltip": "No function yet",
+
+  "item.arcproj.the_moon": "The Moon (XVIII)",
+  "item.arcproj.the_moon.tooltip": "Sets world time to night",
+
+  "item.arcproj.the_sun": "The Sun (XIX)",
+  "item.arcproj.the_sun.tooltip": "Sets World time to day",
+
+  "item.arcproj.judgement": "Judgement (XX)",
+  "item.arcproj.judgement.tooltip": "No function yet",
+
+  "item.arcproj.the_world": "The World (XXI)",
+  "item.arcproj.the_world.tooltip": "No function yet",
+
+  "item.arcproj.goat_horn": "Goat Horn",
+  "item.arcproj.stardust": "Stardust",
+
+  "itemGroup.arcproj.general": "§5Arcana",
+  "itemGroup.arcproj.materials": "§5Arcana Materials",
+
+  "container.arcproj.card_holder": "§6Deck",
+  "item.arcproj.card_holder": "Deck",
+  "item.arcproj.card_holder.tooltip": "Right-click to open",
+  "item.arcproj.card_holder.tooltip2": "Can only store tarot cards!",
+
+  "entity.minecraft.villager.mystic": "Mystic",
+
+  "container.arcana_workbench": "Crystal Ball",
+  "block.arcproj.arcana_workbench": "Crystal Ball",
+
+  "item.arcproj.instasword": "InstaKill Sword"
+}

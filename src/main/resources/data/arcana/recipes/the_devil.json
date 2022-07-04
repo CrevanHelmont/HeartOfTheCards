@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#O#",
+    "OAO",
+    "#O#"
+  ],
+  "key": {
+    "#": {
+      "item": "arcproj:goat_horn"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "A": {
+      "item": "arcproj:tarot_card"
+    }
+  },
+  "result": {
+    "item": "arcproj:the_devil",
+    "count": 1
+  }
+}
