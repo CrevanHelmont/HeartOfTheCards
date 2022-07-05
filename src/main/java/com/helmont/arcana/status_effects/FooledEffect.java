@@ -9,6 +9,7 @@ import net.minecraft.entity.attribute.AttributeContainer;
 import net.minecraft.entity.effect.StatusEffect;
 import net.minecraft.entity.effect.StatusEffectCategory;
 import net.minecraft.entity.mob.HostileEntity;
+import net.minecraft.entity.mob.SkeletonEntity;
 import net.minecraft.predicate.entity.EntityPredicates;
 import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.math.Box;
@@ -33,12 +34,22 @@ public class FooledEffect extends StatusEffect {
         public void applyUpdateEffect(LivingEntity entity, int amplifier) {
             if (entity instanceof HostileEntity) {
                 if (((HostileEntity) entity).getTarget() != null) {
+                    if (entity instanceof SkeletonEntity skeleton && skeleton.getTarget().isRemoved()) {
+                        //skeleton.setAttacking(false);
+                        ((HostileEntity) entity).setAiDisabled(true);
+                        ((HostileEntity) entity).setNoGravity(false);
+                    }
                     if (((HostileEntity) entity).getTarget().isPlayer()) {
                         ((HostileEntity) entity).setAiDisabled(true);
                         ((HostileEntity) entity).setNoGravity(false);
                     } else if (((HostileEntity) entity).getTarget().hasStatusEffect(ModRegistries.FOOLED)) {
-                        ((HostileEntity) entity).setTarget(null);
+                        //((HostileEntity) entity).setTarget(null);
+                        ((HostileEntity) entity).setAiDisabled(true);
+                        ((HostileEntity) entity).setNoGravity(false);
                     }
+                } else {
+                    ((HostileEntity) entity).setAiDisabled(true);
+                    ((HostileEntity) entity).setNoGravity(false);
                 }
                 if (!entity.getWorld().isClient) {
 
@@ -51,8 +62,8 @@ public class FooledEffect extends StatusEffect {
                     double[] distList = new double[]{};
 
                     for (Entity entity1 : entityList) {
-                        if(entity1 instanceof HostileEntity hostileEntity) {
-                            if (!hostileEntity.hasStatusEffect(ModRegistries.FOOLED)) {
+                        if(entity1 instanceof HostileEntity hostileEntity && !entity1.isRemoved()) {
+                            if (!hostileEntity.hasStatusEffect(ModRegistries.FOOLED) && entity.canSee(hostileEntity)) {
                                 hostileEntities = MiscUtil.addHostileEntity(hostileEntities.length, hostileEntities, hostileEntity);
                                 double x = entity.getX() - entity1.getX();
                                 double y = entity.getY() - entity1.getY();
@@ -67,9 +78,11 @@ public class FooledEffect extends StatusEffect {
                         System.out.println(Arrays.toString(hostileEntities));
                         System.out.println(Arrays.toString(distList));
                         System.out.println(min);
+
                         System.out.println(ArrayUtils.indexesOf(distList, min).stream().toArray()[0]);
                         HostileEntity hostileEntity2 = hostileEntities[ArrayUtils.indexesOf(distList, min).stream().toArray()[0]];
                         ((HostileEntity) entity).setTarget(hostileEntity2);
+                        System.out.println(entity.canSee(hostileEntity2));
                         if (hostileEntity2 != null && !hostileEntity2.hasStatusEffect(ModRegistries.FOOLED)) {
                             ((HostileEntity) entity).setAiDisabled(false);
                         }

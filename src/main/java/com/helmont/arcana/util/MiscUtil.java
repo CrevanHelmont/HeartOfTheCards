@@ -180,4 +180,29 @@ public class MiscUtil {
 
         return newarr;
     }
+
+    public static int calcExpFromLvl(int lvl) {
+        if (0 < lvl && lvl < 17) {
+            return (int) (Math.pow(lvl, 2) + 6 * lvl);
+        } else if (lvl >= 17 && lvl < 32) {
+            return (int) (2.5 * Math.pow(lvl, 2) - 40.5 * lvl + 360);
+        } else if (lvl >= 32) {
+            return (int) (4.5 * Math.pow(lvl, 2) - 162.5 * lvl + 2220);
+        }
+        return 0;
+    }
+
+    public static int calcExpFromLvl(int lvl, int fromLvl) {
+        return calcExpFromLvl(lvl) - calcExpFromLvl(fromLvl);
+    }
+
+    public static int calcLvlFromExp(int lvl) {
+        if (lvl < 17) {
+            return (int) (Math.sqrt(lvl + 9) - 3);
+        } else if (lvl < 32) {
+            return (int) (8.1 + Math.sqrt(0.4 * (lvl - 195.975)));
+        } else {
+            return (int) (18.056 + Math.sqrt(0.222 * (lvl - 752.986)));
+        }
+    }
 }
